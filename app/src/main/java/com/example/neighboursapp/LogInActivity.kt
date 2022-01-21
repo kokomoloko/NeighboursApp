@@ -37,7 +37,7 @@ class LogInActivity : AppCompatActivity()  {
         auth = Firebase.auth
         // [END initialize_auth]
         /*btnSignIn = findViewById(R.id.btnSignIn)*/
-        var btnSignIn = findViewById<View>(R.id.btnSignIn) as SignInButton
+        var btnSignIn = findViewById<View>(R.id.btnSignIn) as Button
         // Configure Google Sign In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
