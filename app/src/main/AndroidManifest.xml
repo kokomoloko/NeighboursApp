@@ -11,6 +11,9 @@
         android:theme="@style/Theme.NeighboursApp">
         <activity
             android:name=".LogInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

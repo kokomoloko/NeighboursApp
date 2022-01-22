@@ -17,7 +17,6 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class LogInActivity : AppCompatActivity()  {
-
     private companion object{
         private const val TAG ="LogInActivity"
         private const val RC_GOOGLE_SIGN_IN =1000
@@ -25,7 +24,6 @@ class LogInActivity : AppCompatActivity()  {
         // [START declare_auth]
         private lateinit var auth: FirebaseAuth
         // [END declare_auth]
-
     }
     private lateinit var btnSignIn: Button
 
@@ -36,8 +34,7 @@ class LogInActivity : AppCompatActivity()  {
         // Initialize Firebase Auth
         auth = Firebase.auth
         // [END initialize_auth]
-        /*btnSignIn = findViewById(R.id.btnSignIn)*/
-        var btnSignIn = findViewById<View>(R.id.btnSignIn) as Button
+        var btnGoogleSignIn = findViewById<View>(R.id.btnGoogleSignIn) as Button
         // Configure Google Sign In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -45,10 +42,12 @@ class LogInActivity : AppCompatActivity()  {
             .build()
         val googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        btnSignIn.setOnClickListener {
+        btnGoogleSignIn.setOnClickListener {
             val signInIntent = googleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_GOOGLE_SIGN_IN)
         }
+        // sign in with password
+
     }
     // [START on_start_check_user]
     override fun onStart() {
