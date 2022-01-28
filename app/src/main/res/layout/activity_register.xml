@@ -8,7 +8,7 @@
     <!--tools:context=".MainActivity"-->>
 
     <TextView
-        android:id="@+id/signIn"
+        android:id="@+id/titleLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -22,29 +22,36 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/nameRegistration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/signIn"
+        android:layout_below="@id/titleLine"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:hint="Name"
-        android:layout_margin="10dp"
-        android:padding="20dp"
-        android:textSize="25dp" />
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/name"
-        android:hint="Username"
-        android:layout_margin="10dp"
         android:padding="20dp"
         android:textSize="25dp" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/emailRegistration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/username"
+        android:layout_below="@id/nameRegistration"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Email"
+        android:padding="20dp"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/passwordRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailRegistration"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -54,20 +61,20 @@
         android:textSize="25dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/signin_btn"
+        android:id="@+id/registerBtn"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/password"
+        android:layout_below="@id/passwordRegistration"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         app:cornerRadius="20dp"
-        android:text="Login" />
+        android:text="Register" />
 
     <LinearLayout
         android:id="@+id/popuptxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/signin_btn"
+        android:layout_below="@id/registerBtn"
         android:layout_marginTop="10dp"
         android:gravity="center">
 
@@ -84,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/txtAlreadyHaveAccount"
             android:layout_marginLeft="5dp"
-            android:text="Forgot password?"
+            android:text="Login!"
             android:textColor="@color/purple_700"
             android:textStyle="bold"/>
 
