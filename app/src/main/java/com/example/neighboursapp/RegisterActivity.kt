@@ -53,7 +53,6 @@ class RegisterActivity : AppCompatActivity() {
                     val password: String = passwordRegistration.text.toString().trim{ it <= ' '}
 
                     // create an instance and create and register a user with name, email and password.
-
                     FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password)
                         .addOnCompleteListener() { task ->
                             //if the registration is successfully done
@@ -72,8 +71,8 @@ class RegisterActivity : AppCompatActivity() {
                                 val intent =
                                     Intent(this@RegisterActivity,MainActivity::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                                intent.putExtra("user_id",firebaseUser.uid)
-                                intent.putExtra("email_id",email)
+                                intent.putExtra("userId",firebaseUser.uid)
+                                intent.putExtra("emailId",email)
                                 startActivity(intent)
                                 finish()
                             } else  {

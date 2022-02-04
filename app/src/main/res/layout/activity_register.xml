@@ -68,7 +68,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         app:cornerRadius="20dp"
-        android:text="Register" />
+        android:text="Register now" />
 
     <LinearLayout
         android:id="@+id/popuptxt"
